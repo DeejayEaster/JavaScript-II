@@ -496,10 +496,68 @@ console.log(ticketPriceTotal);
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
-// Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
+// Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then
+//Solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// The marketing director needs a list of the companies represented in the event.
+
+let attendingCompanies = [];
+runners.map(function(runner) {
+  attendingCompanies.push(runner.company_name);
+});
 
 // Problem 2
+// How many of each shirt size will we need?
+let xs = [];
+const xtraSM = person => {
+  return person.shirt_size === "XS";
+};
+xs = runners.filter(xtraSM);
+
+let sm = [];
+const small = person => {
+  return person.shirt_size === "S";
+};
+sm = runners.filter(small);
+
+let med = [];
+const medium = person => {
+  return person.shirt_size === "M";
+};
+med = runners.filter(medium);
+
+let lg = [];
+const large = person => {
+  return person.shirt_size === "L";
+};
+lg = runners.filter(large);
+
+let xl = [];
+const xtraL = person => {
+  return person.shirt_size === "XL";
+};
+XL = runners.filter(xtraL);
+
+let xl2 = [];
+const doubleX = person => {
+  return person.shirt_size === "2XL";
+};
+xl2 = runners.filter(doubleX);
+
+let xl3 = [];
+const tripleX = person => {
+  return person.shirt_size === "3XL";
+};
+xl3 = runners.filter(tripleX);
 
 // Problem 3
+// Create a vip list of donars who donated more than 200.
+
+// let largeShirts = [];
+// const largeSized = object => {
+//   return object.shirt_size === "L";
+// };
+// largeShirts = runners.filter(largeSized);
+// console.log(largeShirts);
+// console.log(largeShirts);
