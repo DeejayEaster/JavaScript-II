@@ -488,7 +488,7 @@ let ticketPriceTotal = [];
 const calc = (acc, donate) => {
   return acc + donate;
 };
-runners.forEach(function(object) {
+runners.forEach(object => {
   ticketPriceTotal.push(object.donation);
 });
 ticketPriceTotal = ticketPriceTotal.reduce(calc);
@@ -550,14 +550,10 @@ const tripleX = person => {
   return person.shirt_size === "3XL";
 };
 xl3 = runners.filter(tripleX);
-
+console.log;
 // Problem 3
-// Create a vip list of donars who donated more than 200.
+// Create a vip list of donars who donated more than 200
 
-// let largeShirts = [];
-// const largeSized = object => {
-//   return object.shirt_size === "L";
-// };
-// largeShirts = runners.filter(largeSized);
-// console.log(largeShirts);
-// console.log(largeShirts);
+let highRollers = runners
+  .filter(runner => runner.donation >= 200)
+  .map(runner => `${runner.first_name} + ': ' + ${runner.donation}`);
